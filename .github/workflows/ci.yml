@@ -57,7 +57,7 @@ jobs:
         working-directory: frontend
 
       - name: Upload frontend coverage to Codecov
-        uses: codecov/codecov-action@v5
+        uses: codecov/codecov-action@v7
         with:
           files: frontend/coverage/lcov.info
           flags: frontend
@@ -142,7 +142,7 @@ jobs:
           NODE_ENV: test
 
       - name: Upload backend coverage to Codecov
-        uses: codecov/codecov-action@v5
+        uses: codecov/codecov-action@v7
         with:
           files: backend/coverage/lcov.info
           flags: backend
@@ -252,7 +252,7 @@ jobs:
         working-directory: contracts
 
       - name: Upload contract coverage to Codecov
-        uses: codecov/codecov-action@v5
+        uses: codecov/codecov-action@v7
         with:
           files: contracts/coverage/cobertura.xml
           flags: contracts
