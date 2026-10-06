@@ -116,14 +116,14 @@ jobs:
           } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Upload Optimized WASM Artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: stream-contract-${{ env.NETWORK }}
           path: contracts/target/wasm32-unknown-unknown/optimized/*.wasm
           if-no-files-found: error
 
       - name: Upload Deployment Info
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: deployment-info-${{ env.NETWORK }}
           path: deployment-info.json
